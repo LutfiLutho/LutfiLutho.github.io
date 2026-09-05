@@ -23,14 +23,6 @@
     />
     <link rel="stylesheet" href="styles.css" />
     <title>Lutfi Luthoifi — Data Portfolio</title>
-    <script>
-      (() => {
-        document.documentElement.classList.add("js");
-        const savedTheme = localStorage.getItem("theme");
-        const prefersDark = window.matchMedia("(prefers-color-scheme: dark)").matches;
-        document.documentElement.dataset.theme = savedTheme || (prefersDark ? "dark" : "light");
-      })();
-    </script>
   </head>
 
   <body>
@@ -123,24 +115,15 @@
           </div>
 
           <div class="hero-visual reveal" data-delay="1">
-            <div class="visual-grid" aria-hidden="true"></div>
-            <div class="visual-label visual-label-top">
-              <span>FOCUS</span>
-              Business impact
-            </div>
             <img
               class="portrait"
-              src="Foto-removebg-preview.png"
+              src="assets/portrait-cinematic.webp"
               alt="Portrait of Lutfi Luthoifi"
-              width="540"
-              height="640"
+              width="1122"
+              height="1402"
+              fetchpriority="high"
+              decoding="async"
             />
-            <div class="visual-label visual-label-bottom">
-              <span>METHOD</span>
-              Ask · Analyze · Act
-            </div>
-            <div class="orbit orbit-one" aria-hidden="true"></div>
-            <div class="orbit orbit-two" aria-hidden="true"></div>
           </div>
         </div>
 
@@ -180,7 +163,7 @@
           <article class="case-card case-featured reveal">
             <div class="case-media">
               <img
-                src="image/oca-dashboard-live.jpg"
+                src="assets/oca-dashboard.jpg"
                 alt="OCA Blast operational risk dashboard"
                 loading="eager"
               />
@@ -260,7 +243,7 @@
             <article class="case-card reveal">
               <div class="case-media">
                 <img
-                  src="image/delivery-dashboard-live.jpg"
+                  src="assets/delivery-dashboard.jpg"
                   alt="Supply chain delivery delay dashboard"
                   loading="lazy"
                 />
@@ -319,7 +302,7 @@
             <article class="case-card reveal" data-delay="1">
               <div class="case-media">
                 <img
-                  src="image/finance-dashboard-live.jpg"
+                  src="assets/finance-dashboard.jpg"
                   alt="RevoFin credit risk dashboard"
                   loading="lazy"
                 />
@@ -378,7 +361,7 @@
             <article class="case-card case-wide reveal">
               <div class="case-media">
                 <img
-                  src="image/superstore-dashboard-live.jpg"
+                  src="assets/superstore-dashboard.jpg"
                   alt="Superstore profitability dashboard"
                   loading="lazy"
                 />
@@ -546,6 +529,8 @@
       </div>
     </footer>
 
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/gsap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/ScrollTrigger.min.js"></script>
     <script type="module" src="script.js"></script>
   </body>
 </html>
