@@ -4,7 +4,7 @@
 
 I audited 180,519 order-item records into 65,752 unique orders, established consistent delivery KPIs, and built a Tableau dashboard to help prioritize further investigation. The analysis separates late rates, order volume, and the value of sales attached to late orders.
 
-[Explore Dashboard](https://public.tableau.com/app/profile/lutfi.luthoifi/viz/Delivery_Failure_Lab_FINAL/DeliveryFailureLab) · [View Presentation (PDF)](https://lutfilutho.github.io/projects/delivery-failure-lab/presentation/delivery_failure_presentation_v2.pdf) · [Analysis Notebook](notebooks/delivery_failure_analysis.ipynb) · [Project Documentation (PDF, Indonesian)](https://lutfilutho.github.io/projects/delivery-failure-lab/documentation/delivery_failure_project_documentation.pdf)
+[Explore Dashboard](https://public.tableau.com/app/profile/lutfi.luthoifi/viz/Delivery_Failure_Lab_FINAL/DeliveryFailureLab) · [View Presentation](https://docs.google.com/presentation/d/1fHkn5w-8Q7_h_KUt3C280WTGMatdZOuT9IgMjvwxF2s/edit?usp=drivesdk) · [Analysis Notebook](notebooks/delivery_failure_analysis.ipynb) · [Project Documentation (DOCX)](https://docs.google.com/document/d/1b1msl2l-zXMWoltpB6G38XJ9TiaEuGL8/edit?usp=drivesdk&ouid=113182415142613247086&rtpof=true&sd=true)
 
 [![Delivery Failure Lab dashboard: SLA reliability, shipping modes, severity, sales exposure, and improvement scenario](images/dashboard-preview.webp)](https://public.tableau.com/app/profile/lutfi.luthoifi/viz/Delivery_Failure_Lab_FINAL/DeliveryFailureLab)
 
@@ -73,36 +73,22 @@ The published Tableau simulator supports 0%–25% relative improvement in 5% ste
 
 ## Recommendations
 
-Validate the SLA definitions and feasibility of First Class and Second Class. Investigate Standard Class because it carries the largest late volume and associated sales. Select an intervention after collecting process evidence, then run a 90-day pilot with a comparable control or baseline. Track late rate alongside cancellation, shipping cost, and customer-claim measures. The proposed six-month objective is a 10% relative reduction in late orders, subject to pilot evidence.
+Validate the SLA definitions and feasibility of First Class and Second Class. Investigate Standard Class because it carries the largest late volume and associated sales. Select an intervention after collecting process evidence, then test the proposed change on a limited scope with a comparable control or baseline. Track late rate alongside cancellation, shipping cost, and customer-claim measures. The proposed six-month objective is a 10% relative reduction in late orders, subject to test results.
 
 ## Project files
 
-| Path | Contents |
+| Resource | Contents |
 |---|---|
-| `notebooks/delivery_failure_analysis.ipynb` | English analysis with saved outputs and local CSV setup |
-| `documentation/delivery_failure_project_documentation.pdf` | 16-page Indonesian methodology document |
-| `presentation/delivery_failure_presentation_v2.pdf` | 22-slide Version 2 presentation |
+| `notebooks/delivery_failure_analysis.ipynb` | Executed analysis notebook used for the project, with saved outputs |
+| [Google Slides presentation](https://docs.google.com/presentation/d/1fHkn5w-8Q7_h_KUt3C280WTGMatdZOuT9IgMjvwxF2s/edit?usp=drivesdk) | Editable 22-slide presentation |
+| [Project documentation (DOCX)](https://docs.google.com/document/d/1b1msl2l-zXMWoltpB6G38XJ9TiaEuGL8/edit?usp=drivesdk&ouid=113182415142613247086&rtpof=true&sd=true) | Editable 16-page Indonesian methodology document |
 | `outputs/` | Shipping mode, monthly SLA, financial exposure, association, and scenario CSVs |
 | `images/dashboard-preview.webp` | Compressed screenshot of the published dashboard |
-| `requirements.txt` | Python packages used by the public notebook |
 
-The [original Google Slides presentation](https://docs.google.com/presentation/d/1fHkn5w-8Q7_h_KUt3C280WTGMatdZOuT9IgMjvwxF2s/edit?usp=drivesdk) remains the editable deck. The PDFs and public notebook here are website editions. Assets were packaged on 23 September 2026.
+The presentation and documentation links point to the editable source files in Google Drive. The notebook in this repository is the executed project notebook used for the analysis.
 
-## Run the notebook
+## Notebook notes
 
-1. Download or clone this repository and open `projects/delivery-failure-lab/`.
-2. Download `DataCoSupplyChainDataset.csv` from the source above and place it in `data/raw/` inside this project.
-3. Create a Python environment, install `requirements.txt`, and launch Jupyter:
+The public notebook preserves the executed analysis and saved outputs used to build the published dashboard and presentation. It was developed in Google Colab, mounts Google Drive, and reads the project's Google Sheets copy of the DataCo dataset through authenticated access.
 
-```bash
-python -m venv .venv
-# Activate the environment using the command for your operating system.
-python -m pip install -r requirements.txt
-python -m jupyter lab
-```
-
-4. Open `notebooks/delivery_failure_analysis.ipynb` and run from the top. The first setup cell resolves the project folder from the current directory or `DELIVERY_LAB_PATH`.
-
-For Colab, upload the project and CSV, install the same packages, and set `os.environ["DELIVERY_LAB_PATH"]` to the uploaded project folder before running the setup cell.
-
-Saved analytical outputs come from the supplied executed notebook. Publishing preparation changed the input setup and raw-data preview, translated remaining code comments, and removed private connection details. The analytical calculations are unchanged; the new CSV setup has not been rerun against the full raw dataset as part of website packaging. Source revisions or CSV exports may differ in formatting or numeric precision, so verify the audit counts and financial reconciliation when rerunning.
+External viewers can review the complete code and outputs directly on GitHub. To reproduce the workflow independently, download the DataCo source linked above and adapt the notebook's input/output setup to a local or personal Drive environment.
