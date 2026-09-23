@@ -73,7 +73,7 @@ The published Tableau simulator supports 0%–25% relative improvement in 5% ste
 
 ## Recommendations
 
-Validate the SLA definitions and feasibility of First Class and Second Class. Investigate Standard Class because it carries the largest late volume and associated sales. Select an intervention after collecting process evidence, then test the proposed change on a limited scope with a comparable control or baseline. Track late rate alongside cancellation, shipping cost, and customer-claim measures. The proposed six-month objective is a 10% relative reduction in late orders, subject to test results.
+Validate the SLA definitions and feasibility of First Class and Second Class. Investigate Standard Class because it carries the largest late volume and associated sales. Select an intervention after collecting process evidence, then run a 90-day pilot with a comparable control or baseline. Track late rate alongside cancellation, shipping cost, and customer-claim measures. The proposed six-month objective is a 10% relative reduction in late orders, subject to pilot evidence.
 
 ## Project files
 
