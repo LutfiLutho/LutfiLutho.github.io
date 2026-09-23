@@ -38,7 +38,7 @@ The analysis uses the DataCo supply-chain dataset, covering January 2015 to Janu
 6. **Measure exposure and scenarios.** Sum net sales associated with late orders and calculate relative improvement scenarios at a fixed eligible volume.
 7. **Publish and communicate.** Export the order model for Tableau, add filters and a scenario parameter, and explain results in a presentation and project documentation.
 
-**Tools:** Python, pandas, NumPy, SciPy, matplotlib, Excel, and Tableau Public.
+**Tools:** Python, pandas, NumPy, SciPy, matplotlib, Google Sheets, and Tableau Public.
 
 ## Key findings
 
@@ -61,7 +61,7 @@ The dashboard combines an SLA baseline, shipping-mode reliability, delay severit
 
 The simulator offers 0%–25% relative improvement in 5% steps. At the default **10% relative reduction**, the historical baseline implies **3,605 fewer late orders**, **32,443 remaining late orders**, and a **51.58% projected late rate**. About **$1.81M** of sales exposure moves out of the late category under the scenario assumptions. This is not additional revenue, cash savings, a forecast, or an achieved result.
 
-The notebook and `improvement_scenarios.csv` retain the original 5%, 10%, and 15% scenarios. The final dashboard and presentation extend the choices to 0%–25%. The presentation states the final workbook's separate count-rounding and proportional-exposure formulas; the project documentation also records an earlier count-based formulation. These agree at the displayed 10% headline, but can differ slightly in other filtered scenarios.
+The published Tableau simulator supports 0%–25% relative improvement in 5% steps. At the default 10% scenario, 36,048 late orders become 32,443 projected late orders, equivalent to a 51.58% projected late rate at fixed eligible volume. The scenario is directional and does not represent a forecast or realized savings.
 
 ## Limitations
 
@@ -73,7 +73,7 @@ The notebook and `improvement_scenarios.csv` retain the original 5%, 10%, and 15
 
 ## Recommendations
 
-Validate the SLA definitions and feasibility of First Class and Second Class. Investigate Standard Class because it carries the largest late volume and associated sales. Select an intervention after collecting process evidence, then run a 90-day pilot with a comparable control or baseline. Track late rate alongside cancellation, shipping cost, and customer-claim measures. The proposed six-month objective is a 10% relative late-rate reduction, subject to pilot evidence.
+Validate the SLA definitions and feasibility of First Class and Second Class. Investigate Standard Class because it carries the largest late volume and associated sales. Select an intervention after collecting process evidence, then run a 90-day pilot with a comparable control or baseline. Track late rate alongside cancellation, shipping cost, and customer-claim measures. The proposed six-month objective is a 10% relative reduction in late orders, subject to pilot evidence.
 
 ## Project files
 
