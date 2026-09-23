@@ -137,8 +137,8 @@
             <span>loan records analyzed</span>
           </div>
           <div class="metric-item">
-            <strong>$914K</strong>
-            <span>profit at risk quantified</span>
+            <strong>$18.08M</strong>
+            <span>late-order sales exposure</span>
           </div>
           <div class="metric-item">
             <strong>4</strong>
@@ -240,61 +240,100 @@
           </article>
 
           <div class="case-grid">
-            <article class="case-card reveal">
+            <article class="case-card reveal" id="delivery-failure-lab" aria-labelledby="delivery-failure-title">
               <div class="case-media">
                 <img
-                  src="assets/delivery-dashboard.jpg"
-                  alt="Supply chain delivery delay dashboard"
+                  src="projects/delivery-failure-lab/images/dashboard-preview.webp"
+                  alt="Delivery Failure Lab Tableau dashboard showing 57.31% late orders, shipping-mode reliability, sales exposure, and a 10% improvement scenario"
+                  width="1600"
+                  height="900"
                   loading="lazy"
+                  decoding="async"
                 />
                 <div class="case-index">02</div>
                 <div class="case-category">Supply chain</div>
               </div>
               <div class="case-body">
                 <div class="case-heading">
-                  <p class="mono-label">Python · Tableau</p>
-                  <h3>Delivery Delay — Performance & Profitability</h3>
+                  <p class="mono-label">Python · Pandas · SciPy · Tableau</p>
+                  <h3 id="delivery-failure-title">Delivery Failure Lab</h3>
                   <p>
-                    Connected a 57.3% late-delivery rate to approximately $914K
-                    in profit at risk and isolated fulfillment as the priority.
+                    Audited 180,519 order items into 65,752 unique orders to
+                    evaluate delivery SLAs, identify services to investigate,
+                    and model improvement scenarios.
                   </p>
                 </div>
                 <div class="case-metrics two-col">
-                  <div><strong>57.3%</strong><span>deliveries late</span></div>
-                  <div><strong>≥10%</strong><span>reduction target</span></div>
+                  <div><strong>57.31%</strong><span>eligible orders late</span></div>
+                  <div><strong>$18.08M</strong><span>late-order sales exposure</span></div>
                 </div>
                 <details class="case-details">
                   <summary>
-                    Read the analysis
+                    Key findings &amp; methodology
                     <span class="details-icon" aria-hidden="true">+</span>
                   </summary>
                   <div class="details-stack">
                     <p>
-                      Compared delay rates across shipping modes and regions,
-                      then built a Profit at Risk framework. Standard Class
-                      carried the highest financial exposure because of its
-                      order volume, while region-level consistency pointed to
-                      an operational fulfillment issue.
+                      <strong>Audit:</strong> one order receives one vote in SLA
+                      KPIs. After excluding 2,855 canceled shipments, 36,048 of
+                      62,897 eligible orders were late. Financial totals reconcile
+                      before and after aggregation.
                     </p>
                     <p>
-                      Recommended redesigning SLA commitments and optimizing
-                      warehouse dispatch to reduce late delivery by at least 10%.
+                      <strong>Finding:</strong> First Class and Second Class had
+                      late rates of 100.00% and 79.99%. Standard Class had the
+                      most late orders (14,995) and the largest sales exposure
+                      ($7.52M). Shipping mode showed the strongest measured
+                      association with late status (Cramér’s V = 0.481).
+                    </p>
+                    <p>
+                      <strong>Recommendation:</strong> validate premium-service
+                      SLA rules and investigate Standard Class for an operational
+                      pilot. A 10% relative reduction would mean 3,605 fewer late
+                      orders and a 51.58% late rate at fixed eligible volume.
+                    </p>
+                    <p>
+                      <strong>Limits:</strong> historical data from Jan 2015 to
+                      Jan 2018. Association does not establish cause. Exposure
+                      measures sales attached to late orders, not proven loss.
+                      The simulator is a planning scenario, not a forecast or
+                      an achieved result.
                     </p>
                   </div>
                 </details>
-                <div class="case-actions">
+                <div class="case-actions delivery-actions" aria-label="Delivery Failure Lab resources">
                   <a
-                    class="text-link"
-                    href="https://public.tableau.com/app/profile/lutfi.luthoifi/viz/DEEPP1_17699608370300/Dashboard1"
+                    class="button button-primary delivery-primary"
+                    href="https://public.tableau.com/app/profile/lutfi.luthoifi/viz/Delivery_Failure_Lab_FINAL/DeliveryFailureLab"
                     target="_blank"
                     rel="noopener noreferrer"
-                  >Dashboard <span aria-hidden="true">↗</span></a>
+                  >Explore Dashboard <span aria-hidden="true">↗</span></a>
                   <a
                     class="text-link"
-                    href="https://docs.google.com/presentation/d/1qX4dyMFNqyzhu_jJpqwkHygidsk6YuSw6b-GFEucSsU"
+                    href="projects/delivery-failure-lab/presentation/delivery_failure_presentation_v2.pdf"
                     target="_blank"
                     rel="noopener noreferrer"
-                  >Presentation <span aria-hidden="true">↗</span></a>
+                    aria-label="View Presentation, English PDF, 22 slides"
+                  >View Presentation <span aria-hidden="true">↗</span></a>
+                  <a
+                    class="text-link"
+                    href="https://github.com/LutfiLutho/LutfiLutho.github.io/blob/main/projects/delivery-failure-lab/notebooks/delivery_failure_analysis.ipynb"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >Analysis Notebook <span aria-hidden="true">↗</span></a>
+                  <a
+                    class="text-link"
+                    href="projects/delivery-failure-lab/documentation/delivery_failure_project_documentation.pdf"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    aria-label="Project Documentation, Indonesian PDF, 16 pages"
+                  >Project Documentation <span aria-hidden="true">↗</span></a>
+                  <a
+                    class="text-link"
+                    href="https://github.com/LutfiLutho/LutfiLutho.github.io/tree/main/projects/delivery-failure-lab"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >View Source <span aria-hidden="true">↗</span></a>
                 </div>
               </div>
             </article>

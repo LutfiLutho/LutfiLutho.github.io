@@ -1946,3 +1946,42 @@ body.motion-pointer-hover .motion-cursor {
 
 /* Fail-safe: never leave the portfolio blank when JS/CDN fails. */
 .js .reveal { opacity: 1; transform: none; }
+
+/* Delivery Failure Lab: one main CTA, with compact links to supporting evidence. */
+#delivery-failure-lab {
+  scroll-margin-top: calc(var(--header-height) + 36px);
+}
+
+.delivery-actions {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  align-items: center;
+  gap: 18px 16px;
+}
+
+.delivery-actions .delivery-primary {
+  grid-column: 1 / -1;
+  justify-content: space-between;
+  width: 100%;
+  min-height: 48px;
+  background: var(--signal);
+  color: #10131c;
+  border-color: var(--signal);
+}
+
+.delivery-actions .text-link {
+  width: fit-content;
+  min-height: 36px;
+  font-size: 12px;
+  line-height: 1.5;
+}
+
+.delivery-actions a:focus-visible {
+  outline: 3px solid var(--accent);
+  outline-offset: 5px;
+}
+
+@media (max-width: 400px) {
+  .delivery-actions { grid-template-columns: 1fr; gap: 12px; }
+  .delivery-actions .delivery-primary { grid-column: 1; }
+}
